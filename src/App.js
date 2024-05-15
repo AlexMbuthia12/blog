@@ -1,16 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import About from './Components/Create';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>I love React</h1>
-      <Navbar/>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
-export default App;
-
-
+export default App;
