@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import About from './Components/Create';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Create from './Components/Create';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route path="/about">
-              <About />
+            </Route>      
+            <Route path="/Create">
+            <Create />
             </Route>
           </Switch>
         </div>
